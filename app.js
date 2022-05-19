@@ -9,5 +9,5 @@ const startVideo = () => {
     });
 };
 
-startVideo();
+startVideo()
 
