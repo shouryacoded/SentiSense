@@ -10,4 +10,3 @@ const startVideo = () => {
 };
 
 startVideo()
-
