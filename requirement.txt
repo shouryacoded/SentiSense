@@ -1,1 +1,4 @@
-The github repository for Face API should be clone for use in app.js...
+git 
+node
+npm
+face-api.js

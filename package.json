@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "face-api.js": "^0.22.2",
+    "live-server": "^1.2.2",
+    "liveserver": "^0.1.20"
+  },
+  "name": "sentisense",
+  "description": "It''s a web based sentiment detection facial recognition app that detects sentiments of a employee and reports the same to the human resource department.",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shouryacoded/SentiSense.git"
+  },
+  "author": "shouryacoded",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shouryacoded/SentiSense/issues"
+  },
+  "homepage": "https://github.com/shouryacoded/SentiSense#readme"
+}
