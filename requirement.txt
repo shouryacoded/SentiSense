@@ -1,4 +1,0 @@
-git 
-node
-npm
-face-api.js

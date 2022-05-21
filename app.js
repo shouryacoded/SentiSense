@@ -13,7 +13,7 @@ const startVideo = () => {
 }
 
 
-
+// Loading all the weights from the weights provided by the face-api
 Promise.all([
     faceapi.nets.tinyFaceDetector.loadFromUri('/weights'),
     faceapi.nets.faceLandmark68Net.loadFromUri('/weights'),
@@ -21,6 +21,8 @@ Promise.all([
     faceapi.nets.faceExpressionNet.loadFromUri('/weights')
 ]).then(startVideo())
 
+
+//Overlaying canvas over the video detections.
 video.addEventListener('playing', () => {
     const canvas = faceapi.createCanvasFromMedia(video) 
     document.body.append(canvas)
