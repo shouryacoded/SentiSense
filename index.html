@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SentiSense</title>
     <script defer src="face-api.min.js"></script>
+    <script defer src="app.js"></script>
+    <link rel="shortcut icon" href="#">
     <style>
         body {
             align-items: center;
@@ -13,7 +15,7 @@
             margin: 0;
             padding: 0;
             width: 100vw;
-            height: 100wh;
+            height: 100vh;
             display: flex;
         }
         canvas{
@@ -22,7 +24,6 @@
     </style>
 </head>
 <body>
-    <video id="video" autoplay muted></video>
+    <video id="video" width="720" height="560" autoplay muted></video>
 </body>
-<script src="app.js"></script>
 </html>
