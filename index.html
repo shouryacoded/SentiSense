@@ -1,29 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SentiSense</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
     <script defer src="face-api.min.js"></script>
     <script defer src="app.js"></script>
-    <link rel="shortcut icon" href="#">
-    <style>
-        body {
-            align-items: center;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-        }
-        canvas{
-            position: absolute;
-        }
-    </style>
-</head>
-<body>
-    <video id="video" width="720" height="560" autoplay muted></video>
-</body>
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="form__container">
+        <div class="heading__secondary">Form</div>
+        <form action="submit" class="form">
+          <div class="form__group">
+            <input
+              type="text"
+              class="form__input"
+              placeholder="Full name"
+              id="name"
+              required
+            />
+            <label for="name" class="form__label">Full name</label>
+          </div>
+
+          <div class="form__group">
+            <input
+              type="email"
+              class="form__input"
+              placeholder="Email address"
+              id="email"
+              required
+            />
+            <label for="email" class="form__label">Email address</label>
+          </div>
+          <div class="form__group">
+            <textarea
+              type="text"
+              class="form__input textarea"
+              placeholder="How is your relationship with the team?"
+              id="question1"
+              maxlength="250"
+              required
+            ></textarea>
+            <label for="question1" class="form__label"
+              >How is your relationship with the team?</label
+            >
+          </div>
+          <div class="form__group">
+            <textarea
+              type="text"
+              class="form__input textarea"
+              placeholder="How is your experience in this company?"
+              id="question2"
+              maxlength="250"
+              required
+            ></textarea>
+            <label for="question2" class="form__label"
+              >How is your experience in this company?</label
+            >
+          </div>
+          <div class="form__group button">
+            <button class="btn btn--green">Next step &rarr;</button>
+          </div>
+        </form>
+      </div>
+      <div class="display">
+        <video id="video" class="display__video" autoplay muted></video>
+      </div>
+    </section>
+  </body>
 </html>
