@@ -1,0 +1,181 @@
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.btn, .btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active, .btn:focus {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+
+.btn--green {
+  background-color: #610620;
+  color: #fff; }
+  .btn--green::after {
+    background-color: #610620; }
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s; }
+
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to right bottom, #610620, rgba(241, 120, 140, 0.981));
+  background-color: black;
+  height: 58rem;
+  width: 145.5rem;
+  display: grid;
+  grid-template-columns: [start] minmax(auto, 75rem) [margin-start] 13.6rem [margin-end] minmax(auto, 59rem) [end];
+  grid-template-rows: auto; }
+
+.display {
+  grid-column: margin-start/end;
+  grid-row: 1;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+  .display__video {
+    position: relative;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 100%; }
+  .display__canvas {
+    position: absolute;
+    z-index: 5000;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    background-blend-mode: darken; }
+
+.form__container {
+  background-color: rgba(255, 255, 255, 0.933);
+  grid-column: start/margin-end;
+  grid-row: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 5000;
+  clip-path: polygon(0% 0, 96.8% 0, 84.8% 100%, 0% 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  padding: 3rem;
+  overflow: hidden; }
+
+.heading__secondary {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, #610620, rgba(241, 120, 140, 0.981));
+  -webkit-background-clip: text;
+  margin: 3rem; }
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column; }
+  .form__group:not(:last-child) {
+    margin-bottom: 2rem; }
+  .form__input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 50%;
+    display: block;
+    transition: all 0.3s;
+    margin: 0 auto; }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #610620; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+    .form__input::-webkit-input-placeholder {
+      color: #999; }
+  .form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 23.5rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem); }
+
+.textarea {
+  transform: translateX(-0.3%);
+  resize: none;
+  overflow-y: scroll; }
+  .textarea::-webkit-scrollbar {
+    background-color: #999;
+    width: 0.5rem;
+    border-radius: 5px; }
+  .textarea::-webkit-scrollbar-thumb {
+    background-color: #434141;
+    border-radius: 5px; }
+
+.button {
+  align-self: center;
+  transform: translateY(-35%); }
