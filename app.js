@@ -2,17 +2,17 @@
 const video = document.getElementById("video");
 const video1 = document.querySelector(".display__video");
 
-// Capturing the video from the browser.
-//const startVideo = () => {
-//  navigator.mediaDevices
-//    .getUserMedia({
-//      video: {},
-//      audio: false,
-//    })
-//    .then((stream) => {
-//      (video.srcObject = stream), (err) => console.error(err);
-//    });
-//};
+ //Capturing the video from the browser.
+const startVideo = () => {
+  navigator.mediaDevices
+    .getUserMedia({
+      video: {},
+      audio: false,
+    })
+    .then((stream) => {
+      (video.srcObject = stream), (err) => console.error(err);
+    });
+};
 
 // Loading all the weights from the weights provided by the face-api
 Promise.all([
@@ -45,3 +45,4 @@ video.addEventListener("playing", () => {
     faceapi.draw.drawFaceExpressions(canvas, adjusted);
   }, 100);
 });
+
