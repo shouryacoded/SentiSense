@@ -2,17 +2,24 @@
 
 SentiSense is a real time face-recognition web app that uses face-api.js -> (https://justadudewhohacks.github.io/face-api.js/docs/index.html) for sentiment detection. 
 
-SentiSense is targeted at teams and employee individual welness and its analysis by using means of form data and real time emotion data, both of which contribute to a final score. 
+SentiSense is targeted at teams and employee individual wellness and its analysis by using means of form data and real time emotion data, both of which contribute to a final score. 
 
 ### Prerequisites
 
-Google Chrome, ver : 95.xx.xx+
-Firefox, ver : 
+Google Chrome, ver : 95.xx.xx+ to latest 
 
+Firefox, ver : 85.x.x+ to latest
 
+Edge, ver : 100.x.xxxx.xx to latest
+
+git, ver : 2.3x.x+
+
+### How to use 
 ```markdown
-Syntax highlighted code block
 
+git clone 
+
+```
 # Header 1
 ## Header 2
 ### Header 3
