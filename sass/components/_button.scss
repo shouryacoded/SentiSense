@@ -32,7 +32,14 @@
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
 
+    &::after {
+      background-color: $color-white;
+    }
+  }
   &--green {
     background-color: $color-primary;
     color: $color-white;
@@ -57,7 +64,6 @@
 
   &--animated {
     animation: moveInBottom 0.5s ease-out 0.75s;
-
     animation-fill-mode: backwards;
   }
 }

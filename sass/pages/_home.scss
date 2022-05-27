@@ -13,12 +13,14 @@
   width: 145.5rem;
   display: grid;
   grid-template-columns:
+    min-content
     [start]minmax(auto, 75rem) [margin-start] 13.6rem[margin-end] minmax(
       auto,
       59rem
     )
     [end];
   grid-template-rows: auto;
+  overflow: hidden;
 }
 .display {
   grid-column: margin-start/end;
@@ -55,4 +57,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+.pointer {
+  position: absolute;
+  grid-column: 1;
+  margin: -3rem;
+  height: 6rem;
+  width: 6rem;
+  z-index: 10000;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 0;
+  background-image: radial-gradient($color-primary, $color-secondary);
+  transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
 }

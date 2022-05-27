@@ -1,0 +1,49 @@
+.container2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+
+  opacity: 0;
+  transition: all 1s ease-out 1s;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary,
+    $color-tertiary
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  visibility: hidden;
+  &__message {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    border: 10px solid $color-primary-dark;
+    display: flex;
+    scale: 0.25;
+    transition: all 0.75s;
+    justify-content: center;
+    align-items: center;
+    animation: blink 2s linear 2s;
+    animation-iteration-count: infinite;
+    background-color: aliceblue;
+  }
+  &__show__result {
+    opacity: 1;
+    transform: translateY(-10rem);
+    animation-fill-mode: backwards;
+  }
+}
+.check__icon {
+  height: 12rem;
+  width: 10rem;
+  fill: $color-primary-dark;
+  stroke: $color-primary-dark;
+  stroke-width: 0.001;
+  transform: rotate(10deg);
+  animation: blinkTick 2s linear 0.75s;
+  animation-iteration-count: infinite;
+}

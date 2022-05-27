@@ -16,8 +16,9 @@
   </head>
   <body>
     <section class="container">
+      <div class="pointer"></div>
       <div class="form__container">
-        <div class="heading__secondary">SentiSense</div>
+        <div class="heading__secondary">Form</div>
         <form action="submit" class="form">
           <div class="form__group">
             <input
@@ -40,7 +41,6 @@
             />
             <label for="email" class="form__label">Email address</label>
           </div>
-
           <div class="form__group">
             <textarea
               type="text"
@@ -54,7 +54,6 @@
               >How is your relationship with the team?</label
             >
           </div>
-
           <div class="form__group">
             <textarea
               type="text"
@@ -68,64 +67,6 @@
               >How is your experience in this company?</label
             >
           </div>
-<!--          
-          <div class="form__group">
-            <textarea
-              type="text"
-              class="form__input textarea"
-              placeholder="Do you feel comfortable contributing ideas and opinions in our workplace?"
-              id="question3"
-              maxlength="250"
-              required
-            ></textarea>
-            <label for="question3" class="form__label"
-              >Do you feel comfortable contributing ideas and opinions in our workplace?</label
-            >
-          </div>
-          
-          <div class="form__group">
-            <textarea
-              type="text"
-              class="form__input textarea"
-              placeholder="Do you feel recognized for your hard work and successes at work?"
-              id="question4"
-              maxlength="250"
-              required
-            ></textarea>
-            <label for="question4" class="form__label"
-              >Do you feel recognized for your hard work and successes at work?</label
-            >
-          </div>
-          
-          <div class="form__group">
-            <textarea
-              type="text"
-              class="form__input textarea"
-              placeholder="Do you feel aligned with the company goals?"
-              id="question5"
-              maxlength="250"
-              required
-            ></textarea>
-            <label for="question5" class="form__label"
-              >Do you feel aligned with the company goals?</label
-            >
-          </div>
-
-          <div class="form__group">
-            <textarea
-              type="text"
-              class="form__input textarea"
-              placeholder="Are you often stressed with deadlines and workloads?"
-              id="question5"
-              maxlength="250"
-              required
-            ></textarea>
-            <label for="question6" class="form__label"
-              >Are you often stressed with deadlines and workloads?</label
-            >
-          </div>
-
-        -->
           <div class="form__group button">
             <button class="btn btn--green">Next step &rarr;</button>
           </div>
@@ -133,6 +74,18 @@
       </div>
       <div class="display">
         <video id="video" class="display__video" autoplay muted></video>
+      </div>
+    </section>
+    <section class="container2">
+      <div class="container2__message">
+        <svg class="check__icon" viewBox="0 0 100 100">
+          <use xlink:href="img/sprite.svg#icon-check"></use>
+        </svg>
+      </div>
+      <div class="container2__show__result">
+        <a href="#section-tours" class="btn btn--white btn--animated"
+          >View Result</a
+        >
       </div>
     </section>
   </body>

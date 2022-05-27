@@ -9,3 +9,39 @@
     transform: translate(0);
   }
 }
+@keyframes blink {
+  0% {
+    border: 10px solid $color-primary-dark;
+    transform: scale(1);
+  }
+  50% {
+    border: 10px solid $color-primary-light;
+    transform: scale(1.1);
+  }
+  100% {
+    border: 10px solid $color-primary-dark;
+    transform: scale(1);
+  }
+}
+
+@keyframes blinkTick {
+  0% {
+    fill: $color-primary-dark;
+  }
+  50% {
+    fill: $color-primary-light;
+  }
+  100% {
+    fill: $color-primary-dark;
+  }
+}
+@keyframes moveup {
+  from {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10rem);
+    opacity: 1;
+  }
+}

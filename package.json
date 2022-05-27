@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
   "dependencies": {
     "face-api.js": "^0.22.2",
     "live-server": "^1.2.2",
@@ -10,6 +13,7 @@
   "main": "app.js",
   "scripts": {
     "start": "live-server",
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -2,7 +2,7 @@
 const video = document.getElementById("video");
 const video1 = document.querySelector(".display__video");
 
- //Capturing the video from the browser.
+// Capturing the video from the browser.
 const startVideo = () => {
   navigator.mediaDevices
     .getUserMedia({
@@ -46,3 +46,30 @@ video.addEventListener("playing", () => {
   }, 100);
 });
 
+const form = document.querySelector(".form");
+let positionX = 0;
+let positionY = 0;
+form.addEventListener("click", (e) => {
+  console.log(e);
+  positionX = e.clientX;
+  positionY = e.clientY;
+});
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const pointer = document.querySelector(".pointer");
+  const result_page = document.querySelector(".container2");
+  const show__result = document.querySelector(".container2__show__result");
+  console.log(pointer);
+  pointer.style.setProperty("left", `${positionX - 60}px`);
+  pointer.style.setProperty("top", `${positionY - 60}px`);
+  pointer.style.setProperty("transform", `scaleX(80) scaleY(80)`);
+  pointer.style.setProperty("opacity", `1`);
+  result_page.style.setProperty("width", "145.5rem");
+  result_page.style.setProperty("height", "58rem");
+  result_page.style.setProperty("opacity", "1");
+  result_page.style.setProperty("visibility", "visible");
+  setTimeout(() => {
+    const container = document.querySelector(".container");
+    container.remove();
+  }, 2000);
+});
