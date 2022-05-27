@@ -14,12 +14,21 @@ Edge, ver : 100.x.xxxx.xx to latest
 
 git, ver : 2.3x.x+
 
-### How to use 
+### Usage
+
+Open Terminal
+
 ```markdown
 
-git clone 
+git clone https://github.com/shouryacoded/SentiSense.git
 
 ```
+```markdown
+
+cd SentiSense
+
+```
+
 # Header 1
 ## Header 2
 ### Header 3
