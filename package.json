@@ -8,7 +8,7 @@
     "liveserver": "^0.1.20"
   },
   "name": "sentisense",
-  "description": "It''s a web based sentiment detection facial recognition app that detects sentiments of a employee and reports the same to the human resource department.",
+  "description": "SentiSense is targeted at teams and employee individual wellness and its analysis by using means of form data and real time emotion data, both of which contribute to a final score.",
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
