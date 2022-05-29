@@ -59,7 +59,11 @@ ctrl+c
 
 ### Windows 10 / 11
 
+## In action
 
+### Demo Face Detection
+
+![Demo Face Detection](https://github.com/shouryacoded/SentiSense/blob/main/Demo-Detection.png)
 
 
 
