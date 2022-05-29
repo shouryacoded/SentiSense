@@ -59,6 +59,21 @@ ctrl+c
 
 ### Windows 10 / 11
 
+Download the release (https://github.com/shouryacoded/SentiSense/releases/tag/First-Release)
+
+Unzip 
+
+Open the folder in command line
+
+```markdown
+live-server
+```
+To exit
+
+CTRL + C
+
+
+
 ## In action
 
 ### Demo Face Detection
