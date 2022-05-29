@@ -43,6 +43,9 @@ cd SentiSense
 sudo npm install -g live-server
 
 ```
+
+To exit 
+
 ```markdown
 
 live-server
