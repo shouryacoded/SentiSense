@@ -36,9 +36,7 @@ git clone https://github.com/shouryacoded/SentiSense.git
 
 ```
 ```markdown
-
 cd SentiSense
-
 ```
 ```markdown
 
