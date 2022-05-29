@@ -3,6 +3,8 @@ const video = document.getElementById("video");
 const video1 = document.querySelector(".display__video");
 let adjusted;
 const emotionMap = new Map([]);
+
+
 // Capturing the video from the browser.
 const startVideo = () => {
   navigator.mediaDevices
@@ -47,6 +49,8 @@ const form_Answer = {
     "How is your experience in this company?",
   ],
 };
+
+
 // Loading all the weights from the weights provided by the face-api
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri("/weights"),
@@ -103,6 +107,9 @@ form.addEventListener("input", (e) => {
     form_Answer[question_number][1].get(emotion) + 1
   );
 });
+
+// Major Display Section for the app.
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const pointer = document.querySelector(".pointer");
@@ -132,6 +139,8 @@ form.addEventListener("submit", (e) => {
   displayResult();
 });
 
+// Function to calculate to final emotion from the model.
+
 function calculatefinalEmotion() {
   const questions = [form_Answer.question1, form_Answer.question2];
   questions.forEach((el) => {
@@ -148,6 +157,8 @@ function calculatefinalEmotion() {
     });
   });
 }
+
+// Function to fetch the result from the emotion detection model
 function displayResult() {
   const displayContent = document.querySelector(".popup__content");
   const container = document.createElement("div");
