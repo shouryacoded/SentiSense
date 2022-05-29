@@ -30,6 +30,7 @@ const form_Answer = {
       ["surprised", 0],
     ]),
     "",
+    "How is your relationship with the team?",
   ],
   question2: [
     "",
@@ -43,6 +44,7 @@ const form_Answer = {
       ["surprised", 0],
     ]),
     "",
+    "How is your experience in this company?",
   ],
 };
 // Loading all the weights from the weights provided by the face-api
@@ -127,6 +129,7 @@ form.addEventListener("submit", (e) => {
     }
   });
   calculatefinalEmotion();
+  displayResult();
 });
 
 function calculatefinalEmotion() {
@@ -143,5 +146,33 @@ function calculatefinalEmotion() {
         console.log(el[2], key);
       }
     });
+  });
+}
+function displayResult() {
+  const displayContent = document.querySelector(".popup__content");
+  const container = document.createElement("div");
+  const name = `  <div class="popup__content__form">
+  <div class="popup__content__question">Your Name:</div>
+  <div class="popup__content__answer">${form_Answer.name}</div>
+ </div>`;
+  const email = `<div class="popup__content__form">
+  <div class="popup__content__question">Your Email ID:</div>
+  <div class="popup__content__answer">${form_Answer.email}</div>
+ </div>`;
+  displayContent.insertAdjacentHTML("beforeend", name);
+  displayContent.insertAdjacentHTML("beforeend", email);
+  const questions = [form_Answer.question1, form_Answer.question2];
+  const response = questions.map(
+    (el) =>
+      `<div class="popup__content__form">
+    <div class="popup__content__question">${el[3]}</div>
+    <div class="popup__content__answer">${el[0]}</div>
+    <div class="popup__content__emotion">
+      Your Emotion: <span>${el[2]}</span>
+    </div>
+  </div>`
+  );
+  response.forEach((el) => {
+    displayContent.insertAdjacentHTML("beforeend", el);
   });
 }

@@ -1,5 +1,4 @@
 .heading__secondary {
-  display: inline-block;
   text-transform: uppercase;
   font-size: 3.5rem;
   font-weight: 700;
@@ -7,5 +6,6 @@
   letter-spacing: 0.2rem;
   background-image: linear-gradient(to right, $color-primary, $color-secondary);
   -webkit-background-clip: text;
-  margin: 3rem;
+  margin: 2rem auto;
+  //margin: 3rem;
 }
