@@ -44,14 +44,18 @@ sudo npm install -g live-server
 
 ```
 
-To exit 
-
 ```markdown
 
 live-server
 
 ```
+To exit 
 
+```markdown
+
+ctrl+c
+
+```
 
 # Header 1
 ## Header 2
