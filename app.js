@@ -60,6 +60,7 @@ Promise.all([
 ]).then(startVideo());
 
 //Overlaying canvas over the video detections.
+
 video.addEventListener("playing", () => {
   const canvas = faceapi.createCanvasFromMedia(video);
   canvas.setAttribute("class", "display__canvas");
