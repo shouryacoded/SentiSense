@@ -1,4 +1,4 @@
-//Defining the video feed for the app
+//Defining the video feed for the app.
 const video = document.getElementById("video");
 const video1 = document.querySelector(".display__video");
 let adjusted;
