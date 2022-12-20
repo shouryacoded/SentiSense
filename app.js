@@ -159,7 +159,8 @@ function calculatefinalEmotion() {
   });
 }
 
-// Function to fetch the result from the emotion detection model
+// Function to fetch the result from the emotion detection model.
+
 function displayResult() {
   const displayContent = document.querySelector(".popup__content");
   const container = document.createElement("div");
